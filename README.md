@@ -47,7 +47,3 @@ Edit the TSX and CSS files, not generated `out/` files. Run `npx prettier --writ
 In **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source. The workflow builds on pushes to `main` and can be rerun with **Run workflow**. Pull requests run checks without deploying. Only successful builds can deploy.
 
 This is a user-site repository hosted at the domain root, so no `basePath` or `assetPrefix` is needed. The workflow uploads only `out/`; repository files, source code, and dependencies are not included in the deployed artifact.
-
-### Migration note
-
-The legacy root `index.html` is retained temporarily so the old branch-based Pages site remains available while switching the source to Actions. It is **not** used by Next.js or included by the workflow. After the first Actions deployment is verified, it can be removed. All future content changes belong in `app/page.tsx`.
