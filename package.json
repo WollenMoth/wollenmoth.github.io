@@ -1,0 +1,28 @@
+{
+  "name": "andre-diaz-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0 <25"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "typecheck": "tsc --noEmit",
+    "format:check": "prettier --check app next.config.ts tsconfig.json package.json scripts .github/workflows README.md",
+    "test:export": "node scripts/check-export.mjs",
+    "check": "npm run typecheck && npm run format:check && npm run build && npm run test:export"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "prettier": "3.10.1",
+    "typescript": "5.9.3"
+  }
+}
